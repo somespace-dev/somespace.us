@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>somespace</title>
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Media/Images/Square44x44Logo.targetsize-32.png"
+    />
+    <link
+      rel="preload"
+      href="Fonts/Heavitas.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Helvetica", sans-serif;
+        text-align: center;
+        margin: 0 10%;
+      }
+
+      body h2 {
+        font-family: "Heavyass";
+      }
+
+      body img {
+        width: 350px;
+        max-width: 100%;
+        align-self: center;
+      }
+
+      footer {
+        color: rgb(150, 150, 150);
+        font-size: medium;
+        font-family: Helvetica, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .video-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media screen and (min-width: 900px) {
+        body {
+          margin: 0 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/" style="text-decoration: none; color: white; cursor: grab"
+          >somespace</a
+        >
+      </h1>
+    </header>
+    <h2>
+      <button onclick="window.location.href = 'about.html';">❓ About</button>
+      <button onclick="window.location.href = 'stream.html';">🖥️ Stream</button>
+      <button onclick="window.location.href = 'contact.html';">
+        📒 Contact
+      </button>
+      <button onclick="window.location.href = 'more.html';">🌐 More</button>
+    </h2>
+    <br />
+    <h2>Videos</h2>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed?listType=playlist&list=UULF2nTcNXLHRORtQevWmIy29A&index=1&controls=2&rel=0&color=white&fs=0"
+        title="recent vid 1"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <br />
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed?listType=playlist&list=UULF2nTcNXLHRORtQevWmIy29A&index=2&controls=2&rel=0&color=white&fs=0"
+        title="recent vid 2"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <h2>VODS</h2>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed?listType=playlist&list=UULFXIRYVzcdS4_X0rCEM8RTdA&index=1&controls=2&rel=0&color=white&fs=0"
+        title="recent vod 1"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <br />
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed?listType=playlist&list=UULFXIRYVzcdS4_X0rCEM8RTdA&index=2&controls=2&rel=0&color=white&fs=0"
+        title="recent vod 1"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <br />
+  </body>
+  <footer>
+    <br />
+    <br />
+    <span id="some" style="font-size: medium; color: hsla(0, 0%, 100%, 0.142)"
+      >◍</span
+    >
+    © somespace
+    <span id="copyright">
+      <script>
+        // SOMESPACE LOGO SCRIPT
+        function generateRandomColor() {
+          return "#" + Math.floor(Math.random() * 16777215).toString(16);
+          //random color will be delivered fresh
+        }
+        some.style.color = generateRandomColor();
+      </script>
+      <script>
+        document
+          .getElementById("copyright")
+          .appendChild(document.createTextNode(new Date().getFullYear()));
+      </script>
+    </span>
+  </footer>
+</html>
