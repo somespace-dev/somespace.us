@@ -5,7 +5,7 @@
     url("../Fonts/Heavitas.woff2") format("woff2"),
     url("../Fonts/Heavitas.ttf") format("truetype"),
     url("../Fonts/Heavitas.svg#Heavitas") format("svg");
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
