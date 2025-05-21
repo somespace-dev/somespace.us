@@ -70,26 +70,23 @@
   <img>
     <header>
        <h1>
-        
-       <span id="some" style=" color: hsla(0, 0%, 100%, 0.142)">
-        ◍ 
-       </span>
-        ©
-            <a href="/" style="text-decoration: none; color: white; cursor: grab">
-           somespace
-        </a>
-    <span id="copyright">
+      
+<span id="span"> ©
+     <a href="/" id="copyright" style="cursor: grab;text-decoration: none;">
+     somespace
+    </a>
+</span>
       <script>
         //by otto benson
         function generateRandomColor() {
           return "#" + Math.floor(Math.random() * 16777215).toString(16);
           //random color will be delivered fresh
         }
-        some.style.color = generateRandomColor();
+        copyright.style.color = generateRandomColor();
       </script>
       <script>
         document
-          .getElementById("copyright")
+          .getElementById("span")
           .appendChild(document.createTextNode(new Date().getFullYear()));
       </script>
 
