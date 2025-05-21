@@ -1,2 +1,1 @@
-# somespace.github.io
-somespace.us
+# somespace.us
