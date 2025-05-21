@@ -5,7 +5,7 @@
     url("../Fonts/Heavitas.woff2") format("woff2"),
     url("../Fonts/Heavitas.ttf") format("truetype"),
     url("../Fonts/Heavitas.svg#Heavitas") format("svg");
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -37,10 +37,12 @@ body {
 header h1{
   text-align: center;
   margin-bottom: 0 ;
+  font-size: large;
   font-family: "Heavyass";
   }
 header h2{
   text-align: center;
   margin: 0 ;
+  font-size: large;
   font-family: "Heavyass";
   }
