@@ -1,0 +1,98 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📒</title>
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css" />
+  </head>
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="Media/Images/Square44x44Logo.targetsize-32.png"
+  />
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 400;
+      text-align: center;
+    }
+    header h1 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    body h2 {
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+      text-align: center;
+      margin-bottom: 0;
+      margin-right: 7%;
+    }
+    body h3 {
+      text-align: center;
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+    body p {
+      color: rgb(181, 181, 181);
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+    footer {
+      text-align: center;
+    }
+    a {
+      color: rgb(180, 215, 255);
+      text-decoration: none;
+    }
+  </style>
+</html>
+<header>
+  <h1>
+    <a href="/" style="text-decoration: none; color: white; cursor: grab"
+      ><img
+        height="40"
+        width="auto"
+        src="Media/Images/somespacevisor.png"
+        alt="logo"
+    /></a>
+  </h1>
+</header>
+
+<body>
+  <br />
+  <br />
+  <p style="color: white">
+    Please review the
+    <a href="/faq.html">FAQ</a> before emailing
+  </p>
+  <p><strong>Email:</strong> somespacecontact [@] gmail [dot] com</p>
+  <br />
+  <br />
+</body>
+
+<footer>
+  <br />
+  <br />
+  <span id="some" style="font-size: medium; color: hsla(0, 0%, 100%, 0.142)"
+    >◍</span
+  >
+  © somespace
+  <span id="copyright">
+    <script>
+      // SOMESPACE LOGO SCRIPT
+      function generateRandomColor() {
+        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+        //random color will be delivered fresh
+      }
+      some.style.color = generateRandomColor();
+    </script>
+    <script>
+      document
+        .getElementById("copyright")
+        .appendChild(document.createTextNode(new Date().getFullYear()));
+    </script>
+  </span>
+</footer>
