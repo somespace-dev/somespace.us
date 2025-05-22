@@ -28,8 +28,6 @@ button:hover{
   transition-duration: 0.3s;
 }
 body {
-  background-color: black;
-  color: white;
   font-family: "Helvetica", sans-serif;
   text-align: center;
 }
