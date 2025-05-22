@@ -46,3 +46,6 @@ header h2{
   font-size: small;
   font-family: "Heavyass";
   }
+  body img {
+    border-radius: 10px;
+  }
