@@ -39,6 +39,11 @@
       margin-right: auto;
       padding: 10px; /* Set the padding value */
     }
+    body img {
+        width: 86%;
+      max-width: 420px;
+        align-self: center;
+      }
     a {
       color: rgb(180, 215, 255);
       text-decoration: none;
@@ -74,27 +79,31 @@
         }
       }
     </style>
-
-</html>
 <header>
-  <h1>
-    <a href="/" style="text-decoration: none; color: white; cursor: grab"
-      ><img
-        height="40"
-        width="auto"
-        src="Media/Images/somespacevisor.png"
-        alt="logo"
-    /></a>
-  </h1>
-</header>
-
-<body>
-  <br />
-  <br />    
+       <h1>
+<span id="span"style="color: white;""> ©
+     <a href="/" id="left" style="color: white;cursor: grab;text-decoration: none;">some</a><a href="/" id="right" style="cursor: grab;text-decoration: none;">space</a>
+</span>
+      <script>
+        //by otto benson
+        function generateRandomColor() {
+          return "#" + Math.floor(Math.random() * 16777215).toString(16);}
+        right.style.color = generateRandomColor();
+      </script>
+      <script>
+        document
+          .getElementById("span")
+          .appendChild(document.createTextNode(new Date().getFullYear()));
+      </script>
+      </h1>
+    </header>
+<body>  
   <h2>
  ❓ About 
+  </h2>
+  <img src="..\Media\Images\mspace.png" alt="HTML5 Icon" loading="lazy" >
+      <h2>
     </h2>
-
   <p>
     somespace is the pseudonym of the online content creator starting in 2018.
     <br /><br />
