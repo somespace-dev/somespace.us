@@ -60,6 +60,8 @@
       }
 
 input[type="text"],input[type="email"],input[type="password"],textarea {
+    
+    width: 200px;
     margin: 4px;
     border: 2px solid  rgb(150, 150, 150);
     border-radius: 7px;
@@ -67,7 +69,7 @@ input[type="text"],input[type="email"],input[type="password"],textarea {
     color: rgb(150, 150, 150);
     background-color: transparent;
     color: rgb(255, 252, 240);
-    font-family: Helvetica
+    font-family: Helvetica;
 }
 
 input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus,textarea:focus {
@@ -167,7 +169,7 @@ button:hover{
     </header>
 <body>  
   <h3>
- 📧 E-Mail List
+ 📧 EMail List
   </h3>
   <br />
 <img src="..\Media\Images\cornersky.jpg" alt="HTML5 Icon" loading="lazy" >
@@ -178,9 +180,10 @@ button:hover{
  method="post" 
  target="popupwindow" 
  class="embeddable-buttondown-form">
-  <input type="email" name="email" id="bd-email" placeholder="example@contact.com">
+  <input style="text-align: center; " type="email" name="email" id="bd-email" placeholder="example@contact.com">
   <input type="hidden" value="1" name="embed">
-  <input type="hidden" name="tag" value="via-subscribe">
+  <br />
+  <input style="text-align: center;"type="hidden" name="tag" value="via-subscribe">
   <input type="submit" value="Sign up">
 </form>
 
