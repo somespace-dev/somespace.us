@@ -173,14 +173,12 @@ button:hover{
 <img src="..\Media\Images\cornersky.jpg" alt="HTML5 Icon" loading="lazy" >
   <br />
   <br />
-<form 
-  action="https://buttondown.com/api/emails/embed-subscribe/somespace"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://buttondown.com/somespace')"
-  class="embeddable-buttondown-form"
->
 
+ <form action="https://buttondown.email/api/emails/embed-subscribe/somespace" 
+ method="post" 
+ target="popupwindow" 
+ onsubmit="window.open('https://buttondown.email/somespace','popupwindow')" 
+ class="embeddable-buttondown-form">
   <input type="email" name="email" id="bd-email" placeholder="example@contact.com">
   <input type="hidden" value="1" name="embed">
   <input type="hidden" name="tag" value="via-subscribe">
