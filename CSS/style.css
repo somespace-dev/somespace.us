@@ -22,7 +22,7 @@ button {
   box-sizing: border-box;
   background-color: rgb(16, 15, 15);
   color: rgb(150, 150, 150);
-  font-size: large;
+  font-size: medium;
   font-family: "Heavyass";
   pointer-events: painted;
   cursor: pointer;
