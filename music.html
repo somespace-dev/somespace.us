@@ -1,128 +1,234 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💿</title>
-    <link rel="stylesheet" href="../CSS/style.css" type="text/css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💿</title>
+  <link rel="stylesheet" href="../CSS/style.css" type="text/css" />
   <link
     rel="icon"
     type="image/x-icon"
     href="Media/Images/Square44x44Logo.targetsize-32.webp"
   />
+
   <style>
-      body {
-        background-color: rgb(16, 15, 15);
-        font-family: "Helvetica", sans-serif;
-        text-align: center;
-        
-        color: rgb(206, 205, 195);
-      }
-      
-      body h3 {
-      width: 86%;
-      max-width: 420px;
-      text-align: left; /* Center the text horizontally */
-      color: rgb(255, 252, 240);
-      margin: 4px;
-      margin-left: auto;
-      margin-right: auto;
-      font-family: "Heavyass";
-      text-align: right;
-      font-size: medium;
-      font-family: "Heavyass";
-     }
-      
-
-      body p {
-      width: 86%;
-      max-width: 420px;
-      text-align: left; /* Center the text horizontally */
+    body {
+      background-color: rgb(16, 15, 15);
+      font-family: "Helvetica", sans-serif;
+      text-align: center;
       color: rgb(206, 205, 195);
-      margin: 4px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 10px; /* Set the padding value */
     }
-    body img {
+
+    body h3 {
       width: 86%;
       max-width: 420px;
-      align-self: center;
-      }
+      margin: 4px auto;
+      text-align: right;
+      color: rgb(255, 252, 240);
+      font-family: "Heavyass";
+      font-size: medium;
+    }
 
+    footer {
+      color: rgb(150, 150, 150);
+      font-size: medium;
+      font-family: Helvetica, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-      footer {
-        color: rgb(150, 150, 150);
-        font-size: medium;
-        font-family: Helvetica, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
+    /* MUSIC LAYOUT */
 
-      .video-container {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-      }
+    .music-wrapper {
+      width: 86%;
+      max-width: 420px;
+      margin: 40px auto;
+    }
 
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-      }
+    .track-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-    </style>
-<header><h1><span id="span"style="color: rgb(255, 252, 240);"">©
-     <a href="/" id="left" style="color: rgb(255, 252, 240);cursor: grab;text-decoration: none;">some</a><a href="/" id="right" style="cursor: grab;text-decoration: none;">space</a>
-</span>
-      <script>
-        //by otto benson
-        function generateRandomColor() {
-          return "#" + Math.floor(Math.random() * 16777215).toString(16);}
-        right.style.color = generateRandomColor();
-      </script>
-      <script>
-        document
-          .getElementById("span")
-          .appendChild(document.createTextNode(new Date().getFullYear()));
-      </script>
-      </h1>
-    </header>
-<body>  
-  <h3>
-💿 Music
-  </h3><br />
-  <img src="..\Media\Images\iem.webp" alt="HTML5 Icon" loading="lazy" >
-      <h2></h2>
-    <br />
-    <p style="      
-      border: 4px solid rgb(206, 205, 195);
+    .track {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border: 4px solid rgb(150, 150, 150);
       border-radius: 10px;
       box-sizing: border-box;
-      font-size: small;
-      text-align: left;">
-    Title: misaligned 
-    <br /><br />
-    Artist: somespace
-    <br /><br />
-    Release: 20250605
-    <br /><br />
-    Additional Info: <a href="https://www.yume.wiki/unconscious/Collective_Unconscious_Wiki">Collective Unconscious</a> entry, free to use.
-    <br /><br />
-<a href="https://on.soundcloud.com/5SOIEt40kLT1VpbZxs">soundcloud</a>  - <a href="..\Media\Audio\misaligned.mp3" download>mp3 file</a>
-   
-    <br />
-  </p>
-  <br />
-  <br />
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .track:hover {
+      background-color: rgb(30, 30, 30);
+    }
+
+    .track.active {
+      background-color: rgb(45, 45, 45);
+      border-color: rgb(255, 252, 240);
+    }
+
+    .track-info {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .track-title {
+      font-weight: bold;
+      color: rgb(255, 252, 240);
+    }
+
+    .track-meta {
+      font-size: 0.8em;
+      color: rgb(160, 160, 160);
+    }
+
+    .track-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .play-btn,
+    .action-btn {
+      background: none;
+      border: 0px solid rgb(255, 252, 240);
+      color: rgb(255, 252, 240);
+      font-size: 20px;
+      padding:0px 0px 1px 0px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .play-btn:hover,
+    .action-btn:hover {
+      background-color: rgb(255, 252, 240);
+      color: rgb(16, 15, 15);
+    }
+
+    #audioPlayer {
+      width: 86%;
+      max-width: 420px;
+      margin: 30px auto;
+      display: block;
+    }
+  </style>
+</head>
+
+<header>
+  <h1>
+    <span id="span" style="color: rgb(255, 252, 240);">©
+      <a href="/" id="left" style="color: rgb(255, 252, 240);cursor: grab;text-decoration: none;">some</a>
+      <a href="/" id="right" style="cursor: grab;text-decoration: none;">space</a>
+    </span>
+
+    <script>
+      function generateRandomColor() {
+        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+      }
+      document.getElementById("right").style.color = generateRandomColor();
+    </script>
+
+    <script>
+      document
+        .getElementById("span")
+        .appendChild(document.createTextNode(new Date().getFullYear()));
+    </script>
+  </h1>
+</header>
+
+<body>
+<h3>💿 Music</h3>
+<main class="music-wrapper">
+  
+
+  <div class="track-list">
+    <!-- TRACK 2 -->
+    <div class="track" data-src="../Media/Audio/smiled_at_coefficients.mp3">
+      <div class="track-info">
+        <span class="track-title">smiled_at_coefficients</span>
+        <span class="track-meta">20260220</span>
+      </div>
+
+      <div class="track-actions">
+        <a href="#" class="action-btn play-trigger">▶️</a>
+        <a class="action-btn" href="../Media/Audio/smiled_at_coefficients.mp3" download>⬇️</a>
+      </div>
+    </div>
+
+    <!-- misaligned -->
+    <div class="track" data-src="../Media/Audio/misaligned.mp3">
+      <div class="track-info">
+        <span class="track-title">misaligned</span>
+        <span class="track-meta">20250605</span>
+      </div>
+
+      <div class="track-actions">
+        <a href="#" class="action-btn play-trigger">▶️</a>
+        <a class="action-btn" href="../Media/Audio/misaligned.mp3"download>⬇️</a>
+        <!--<a class="action-btn" href="https://soundcloud.com" target="_blank">SC</a>
+        <a class="action-btn" href="https://bandcamp.com" target="_blank">BC</a>
+        <a class="action-btn" href="https://youtube.com" target="_blank">YT</a>-->
+      </div>
+    </div>
+
+
+
+  </div>
+</main>
+
+<audio id="audioPlayer" controls></audio>
+
+<script>
+const tracks = document.querySelectorAll('.track');
+const player = document.getElementById('audioPlayer');
+
+tracks.forEach(track => {
+
+  const playTrigger = track.querySelector('.play-trigger');
+  const actionLinks = track.querySelectorAll('.action-btn');
+
+  // play button
+  playTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    playTrack(track);
+  });
+
+  // clicking track plays
+  track.addEventListener('click', () => {
+    playTrack(track);
+  });
+
+  // stop external links from triggering track click
+  actionLinks.forEach(link => {
+    if (!link.classList.contains('play-trigger')) {
+      link.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+  });
+
+});
+
+function playTrack(track) {
+  tracks.forEach(t => t.classList.remove('active'));
+  track.classList.add('active');
+
+  const src = track.getAttribute('data-src');
+  player.src = src;
+  player.play();
+}
+</script>
+
 </body>
+
 <footer>
   <br />
-  </span>
 </footer>
+
+</html>
