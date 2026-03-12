@@ -87,10 +87,12 @@ button {
   font-size: medium;
   font-family: "Heavyass";
   cursor: pointer;
-  text-align: center;        /* CHANGED */
-  vertical-align: middle;    /* CHANGED */
-  line-height: normal;       /* CHANGED */
+  text-align: center;
+  line-height: 1.2;
+  padding: 10px 16px;
+  -webkit-appearance: none;
   transition: border-color 0.3s ease, color 0.3s ease; 
+  appearance: none;
 }
 
 
