@@ -88,6 +88,7 @@ button {
   font-family: "Heavyass";
   cursor: pointer;
   text-align: center;
+  line-height: 1;
   -webkit-appearance: none;
   transition: border-color 0.3s ease, color 0.3s ease; 
   appearance: none;
