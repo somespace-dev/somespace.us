@@ -86,7 +86,7 @@ button {
   font-size: medium;
   font-family: "Heavyass";
   cursor: pointer;
-  vertical-align: middle;
+  vertical-align: bottom;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
 
