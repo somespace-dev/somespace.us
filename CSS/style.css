@@ -89,7 +89,6 @@ button {
   cursor: pointer;
   text-align: center;
   line-height: 1.2;
-  padding: 10px 16px;
   -webkit-appearance: none;
   transition: border-color 0.3s ease, color 0.3s ease; 
   appearance: none;
