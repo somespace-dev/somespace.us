@@ -87,8 +87,11 @@ button {
   font-size: medium;
   font-family: "Heavyass";
   cursor: pointer;
-  text-align: center;
-  transition: border-color 0.3s ease, color 0.3s ease;
+  text-align: center;        /* CHANGED */
+  vertical-align: middle;    /* CHANGED */
+  line-height: normal;       /* CHANGED */
+  -webkit-appearance: none;
+  transition: border-color 0.3s ease, color 0.3s ease; 
 }
 
 
